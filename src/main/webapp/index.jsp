@@ -1,13 +1,13 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Title</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<form action="sum" method="get">
+    <span>Number one : </span> <input type="text" name="number1"><br><br>
+    <span>Number two : </span> <input type="text" name="number2"><br><br>
+    <input type="submit" value="submit">
+</form>
 </body>
 </html>
