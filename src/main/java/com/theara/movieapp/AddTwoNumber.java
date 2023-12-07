@@ -7,7 +7,7 @@ import jakarta.servlet.http.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "sum", urlPatterns = "/sum")
+@WebServlet("/sum")
 public class AddTwoNumber extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)

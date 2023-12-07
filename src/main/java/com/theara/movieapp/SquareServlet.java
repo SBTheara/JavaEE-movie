@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@WebServlet(name = "squareNumber", urlPatterns = "/square-servlet")
+@WebServlet("/square-servlet")
 public class SquareServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp)
