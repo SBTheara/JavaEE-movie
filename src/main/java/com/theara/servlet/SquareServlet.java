@@ -1,4 +1,4 @@
-package com.theara.movieapp;
+package com.theara.servlet;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
