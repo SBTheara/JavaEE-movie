@@ -1,11 +1,21 @@
 package com.theara.controller;
 
 import com.theara.entity.Movie;
+
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MovieController {
@@ -23,5 +33,21 @@ public class MovieController {
   @GetMapping("/getHomePage")
   public String getHomePage(){
     return "HomePage";
+  }
+
+
+  @RequestMapping("/login")
+  public String login(HttpServletRequest request, HttpServletResponse response,HttpSession session,Model model) throws IOException {
+    PrintWriter out = response.getWriter();
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+    if(StringUtils.equals(username,"admin") && StringUtils.equals(password,"admin")){
+      session.setAttribute("username",username);
+      model.addAttribute("user",username);
+      return "redirect:/getHomePage";
+    }else {
+      out.println("Fails login");
+    }
+    return "LoginPage";
   }
 }
