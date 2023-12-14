@@ -4,4 +4,4 @@ spring:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
   datasource:
-    url: 
+    url:

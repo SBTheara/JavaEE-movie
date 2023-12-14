@@ -30,7 +30,7 @@ public class MovieController {
     model.addAttribute("movie", listMovie);
     return "Movie";
   }
-  @GetMapping("/getHomePage")
+  @GetMapping("/home")
   public String getHomePage(){
     return "HomePage";
   }

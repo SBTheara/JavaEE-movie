@@ -8,9 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-    String username = session.getAttribute("username").toString();
-%>
 <html>
 <head>
     <meta name="viewport"
@@ -21,9 +18,57 @@
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.js"></script>
     <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+        }
+        .nav_link{
+            list-style: none;
+        }
+        .nav_link li{
+            display: inline-block;
+            padding: 0px 20px;
+        }
+        .nav_link li a{
+            transition: all 0.3s ease 0s;
+        }
+        .nav_link li a:hover{
+            color: blue;
+        }
+        button{
+            padding: 9px 25px;
+            background-color: rgba(0,136,169,1);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+        button:hover{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-<div id="app"></div>
+<header>
+    <nav>
+        <ul class="nav_link">
+            <li><a href="">Service</a></li>
+            <li><a href="">Project</a></li>
+            <li><a href="">Help</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    <a href="" class="cta"><button>Contact</button></a>
+</header>
 
 <script>
     new Vue({
@@ -31,67 +76,9 @@
         vuetify: new Vuetify(),
         data() {
             return {
-                drawer: null,
-                items: [
-                    ['mdi-email', 'Inbox'],
-                    ['mdi-account-supervisor-circle', 'Supervisors'],
-                    ['mdi-clock-start', 'Clock-in'],
-                ],
-                cards: [
-                    { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 },
-                    { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-                    { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
-                ],
+
             };
         },
-        template: `
-           <v-app id="inspire">
-				<v-app-bar >
-				  <v-app-bar-nav-icon></v-app-bar-nav-icon>
-
-				  <v-app-bar-title><%= username %></v-app-bar-title>
-
-				  <v-spacer></v-spacer>
-
-				  <v-btn icon="mdi-dots-vertical">
-				  </v-btn>
-				</v-app-bar>
-
-				<v-main>
-				  <v-container fluid>
-					  <v-row dense>
-						<v-col
-						  v-for="card in cards"
-						  :key="card.title"
-						  :cols="card.flex"
-						>
-						  <v-card>
-							<v-img
-							  :src="card.src"
-							  class="align-end"
-							  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-							  height="20vh"
-							  cover
-							>
-							  <v-card-title class="text-white" v-text="card.title"></v-card-title>
-							</v-img>
-
-							<v-card-actions>
-							  <v-spacer></v-spacer>
-
-							  <v-btn size="small" color="surface-variant" variant="text" icon="mdi-heart"></v-btn>
-
-							  <v-btn size="small" color="surface-variant" variant="text" icon="mdi-bookmark"></v-btn>
-
-							  <v-btn size="small" color="surface-variant" variant="text" icon="mdi-share-variant"></v-btn>
-							</v-card-actions>
-						  </v-card>
-						</v-col>
-					  </v-row>
-					</v-container>
-				</v-main>
-		  </v-app>
-      `
     });
 </script>
 </body>
