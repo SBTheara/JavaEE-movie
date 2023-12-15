@@ -15,7 +15,7 @@
 <h1> Movie titles </h1>
 <ol>
     <c:forEach items="${movie}" var="mv">
-        <li>${mv.getName()} <a href="../jsp/">add</a></li>
+        <li>${mv.getName()} <a href="WEB-INF/jsp">add</a></li>
     </c:forEach>
 </ol>
 </body>

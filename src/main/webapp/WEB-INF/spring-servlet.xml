@@ -16,9 +16,15 @@
     <!-- Enable annotation-driven MVC controllers -->
     <mvc:annotation-driven />
 
+    <!--    Enable the resource in the location ex./Component/ can use by using prefix ex. /resource/**-->
+    <mvc:resources mapping="/resources/javascript/**" location="/Component/javascript/" />
+
+    <!--    Enable the resource in the location ex./Component/ can use by using prefix ex. /resource/**-->
+    <mvc:resources mapping="/resources/style/**" location="/Component/style/" />
+
     <!-- View resolver for JSP pages -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="prefix" value="/" />
         <property name="suffix" value=".jsp" />
     </bean>
 
