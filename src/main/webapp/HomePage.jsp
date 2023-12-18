@@ -26,8 +26,8 @@
         <header>
             <nav>
                 <ul class="nav_link">
-                    <li><a href="">Service</a></li>
-                    <li><a href="">Project</a></li>
+                    <li><a href="HomePage.jsp">Home</a></li>
+                    <li><a href="DetailPage.jsp">Detail</a></li>
                     <li><a href="">Help</a></li>
                     <li><a href="">About</a></li>
                 </ul>
