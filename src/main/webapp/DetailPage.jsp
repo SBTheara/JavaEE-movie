@@ -17,12 +17,12 @@
     <style>
         #details {
             margin: 10%;
-            display: flex;
+            display: -webkit-inline-flex;
         }
 
         #details img {
-            width: 400px;
-            height: 700px;
+            width: 300px;
+            height: 500px;
         }
 
         #details h1 {
@@ -80,8 +80,8 @@
     </a>
 </header>
 <div id="app">
-    <div id="details">
-        <img src="https://www.themoviedb.org/t/p/original/qMxAmzGQO722q0UlssCOPhrXmvX.jpg" alt="">
+    <div id="details" style="height: 50%;">
+        <div><img src="https://www.themoviedb.org/t/p/original/qMxAmzGQO722q0UlssCOPhrXmvX.jpg" alt=""></div>
         <div class="movie-status">
             <p>New Episodes</p>
             <h1>Avenger 2012</h1>
@@ -103,18 +103,46 @@
                     <v-icon class="ml-4">mdi-star</v-icon>
                     <span>9.6</span>
                 </div>
-                <span>The story revolves around the formation of a superhero team called the Avengers, consisting of Earth's mightiest heroes, who are brought together to save the world from a powerful and malevolent threat.</span>
-                <div class="share" style="align-items: center;justify-content: space-between;border-radius: 20px;background-color: grey;width: 400px;height: 150px;padding: 10px">
-                    <div style="height: 70px;display: flex">
-                        <div style="display: inline-block">
-                            <v-icon>mdi-share</v-icon>
-                            <span>share</span>
+                <div style="width: 800px">
+                    <span>The story revolves around the formation of a superhero team called the Avengers, consisting of Earth's mightiest heroes, who are brought
+                    together to save the world from a powerful and malevolent threat.</span>
+                </div>
+                <div class="share"
+                     style="display: flex;
+                     align-items: center;
+                     justify-content: space-between;
+                     border-radius: 40px;
+                     background-color: grey;
+                     width: 700px;
+                     height: 150px;
+                     padding: 10px;
+                     margin-top: 40px;">
+                    <div style="
+                        height: 60px;
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-around">
+                        <div style="display: grid;align-content: space-between;">
+                            <div style="justify-content: center;display: flex;">
+                                <v-icon>mdi-share</v-icon>
+                            </div>
+                            <div><span>share</span></div>
                         </div>
+                        <div style="display: grid;align-content: space-between;justify-content: start">
+                            <div><h4>Prime video</h4></div>
+                            <div><h5>Streaming channel</h5></div>
+                        </div>
+                        <template>
+                            <v-btn height="100%" rounded flat>
+                                <v-icon>mdi-video</v-icon>
+                            </v-btn>
+                        </template>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <script>
     new Vue({
