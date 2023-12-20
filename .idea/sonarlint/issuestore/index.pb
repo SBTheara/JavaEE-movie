@@ -35,3 +35,5 @@ Z
 *src/main/webapp/Component/style/header.css,f\8\f8f4ab1287eab72760c896005446451e612ac4bc
 [
 +src/main/webapp/Component/javascript/App.js,f\d\fda7f556214dadf6a80c644de438859b3e83c0e0
+Z
+*src/main/java/com/theara/entity/Movie.java,f\d\fd071f05c1f40b0defa408df7be2e7c54915c393

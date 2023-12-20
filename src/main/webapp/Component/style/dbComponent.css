@@ -1,0 +1,108 @@
+#details {
+    margin: 10%;
+    display: -webkit-inline-flex;
+    height: 62vh;
+    align-items: center;
+}
+
+#details > img {
+    width: 300px;
+    height: 100%;
+}
+
+#details .movie-status > h1 {
+    margin: 10px 20px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#details .movie-status {
+    margin-left: 50px;
+}
+
+#details .movie-status p {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.rated {
+    display: flex;
+}
+
+.rated .pg13 {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.rated .quality {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: blue 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.rated > span {
+    margin-left: 20px;
+    color: white;
+}
+
+.rated > .quality {
+    color: white;
+}
+
+.release-info {
+    margin-top: 40px;
+}
+
+.release-info > .release-date > span {
+    margin-top: 40px;
+    color: white;
+}
+
+.release-info > .release-date > .rated-icon {
+    color: white;
+}
+
+.story-line {
+    width: 800px;
+    margin-top: 40px;
+}
+
+.story-line > span {
+    color: white;
+}
+
+.option-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    background-color: grey;
+    width: 700px;
+    height: 150px;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.option-info-child {
+    height: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.share {
+    display: grid;
+    align-content: space-between;
+}
+
+.prime-video {
+    display: grid;
+    align-content: space-between;
+    justify-content: start;
+}
