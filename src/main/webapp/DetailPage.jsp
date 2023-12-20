@@ -8,12 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/resources/style/header.css">
     <link rel="stylesheet" href="/resources/style/dbComponent.css">
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>Title</title>
 </head>
 <body>
@@ -78,8 +78,13 @@
                 </div>
             </div>
         </div>
+        <div class="download">
+            <v-btn rounded width="400px" height="150px" color="#FF6F00">
+                <span style="font-size: 40px;font-weight: bold">DOWNLOAD</span>
+                <v-icon size="40px">mdi-download</v-icon>
+            </v-btn>
+        </div>
     </div>
-</div>
 </div>
 <script>
     new Vue({

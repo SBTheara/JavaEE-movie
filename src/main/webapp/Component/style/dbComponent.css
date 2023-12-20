@@ -1,8 +1,9 @@
 #details {
     margin: 10%;
-    display: -webkit-inline-flex;
-    height: 62vh;
+    display: flex;
+    height: 520px;
     align-items: center;
+    overflow: inherit;
 }
 
 #details > img {
@@ -11,13 +12,13 @@
 }
 
 #details .movie-status > h1 {
-    margin: 10px 20px;
     font-size: 60px;
     font-weight: bold;
 }
 
 #details .movie-status {
     margin-left: 50px;
+    height: 100%;
 }
 
 #details .movie-status p {
@@ -56,11 +57,11 @@
 }
 
 .release-info {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .release-info > .release-date > span {
-    margin-top: 40px;
+    margin-top: 20px;
     color: white;
 }
 
@@ -70,7 +71,7 @@
 
 .story-line {
     width: 800px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .story-line > span {
@@ -86,7 +87,7 @@
     width: 700px;
     height: 150px;
     padding: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .option-info-child {
@@ -105,4 +106,10 @@
     display: grid;
     align-content: space-between;
     justify-content: start;
+}
+
+.download {
+    transform: rotate(0.25turn) translateY(100%);
+    right: 10%;
+    position: absolute;
 }
