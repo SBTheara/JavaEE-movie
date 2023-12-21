@@ -10,6 +10,7 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.js"></script>
+    <script src="/resources/javascript/App.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.5.0/dist/vuetify.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/resources/style/header.css">
@@ -79,17 +80,54 @@
             </div>
         </div>
         <div class="download">
-            <v-btn rounded width="400px" height="150px" color="#FF6F00">
+            <v-btn rounded width="500px" height="150px" color="#FF6F00">
                 <span style="font-size: 40px;font-weight: bold">DOWNLOAD</span>
                 <v-icon size="40px">mdi-download</v-icon>
             </v-btn>
         </div>
     </div>
+    <div class="connect-menu">
+        <db-connect></db-connect>
+    </div>
+    <div>
+        <db-list-movie :items="movies"></db-list-movie>
+    </div>
 </div>
 <script>
     new Vue({
         el: "#app",
-        vuetify: new Vuetify()
+        vuetify: new Vuetify(),
+        data(){
+            return{
+                movies: [
+                    {
+                        movie: 'Avenger 2012',
+                        src: 'https://www.themoviedb.org/t/p/original/qMxAmzGQO722q0UlssCOPhrXmvX.jpg'
+                    },
+                    {
+                        movie: 'Avenger Age of ultrons',
+                        src: 'https://www.komar.de/media/catalog/product/cache/5/image/9df78eab33525d08d6e5fb8d27136e95/4/-/4-4125_avengers_age_of_ultron-movie-poster_web.jpg'
+                    },
+                    {
+                        movie: 'Avenger infinity war',
+                        src: 'https://cdn.europosters.eu/image/750/plastic-frame-avengers-infinity-war-one-sheet-i69678.jpg'
+                    },
+                    {
+                        movie: 'Avenger end game',
+                        src: 'https://images-na.ssl-images-amazon.com/images/I/91zzAMkVCUL._AC_UL600_SR600,600_.jpg'
+                    },
+                    {
+                        movie: 'Spiderman Homecoming',
+                        src: 'https://cdn.europosters.eu/image/750/posters/spider-man-homecoming-teaser-i47518.jpg'
+                    },
+                    {
+                        movie: 'Spiderman no way home',
+                        src: 'https://i.ebayimg.com/images/g/EtoAAOSwYUFj~R7m/s-l1200.webp'
+                    },
+
+                ]
+            }
+        }
     });
 </script>
 </body>

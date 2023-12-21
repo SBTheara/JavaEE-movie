@@ -19,6 +19,8 @@
 #details .movie-status {
     margin-left: 50px;
     height: 100%;
+    align-items: center;
+    display: grid;
 }
 
 #details .movie-status p {
@@ -108,8 +110,11 @@
     justify-content: start;
 }
 
-.download {
+#details > .download {
+    margin-left: 20px;
     transform: rotate(0.25turn) translateY(100%);
-    right: 10%;
-    position: absolute;
+}
+.connect-menu{
+    display: flex;
+    justify-content: center;
 }
